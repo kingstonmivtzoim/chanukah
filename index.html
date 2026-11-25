@@ -24,8 +24,8 @@ button,.button{appearance:none;border:0;border-radius:999px;padding:13px 19px;fo
 @media(max-width:480px){.wrap{padding:20px 13px 36px}.item{padding:12px}.goal .amount{font-size:2.6rem}}
 </style></head><body><main class="wrap">
 <header class="hero"><div style="text-align:right;color:#f4d98e;font-family:Georgia,serif;font-size:1.25rem;font-weight:700;letter-spacing:.04em;margin:0 2px 16px 0" dir="rtl">בס״ד</div>
-<div class="kicker">Kingston, PA Mivtzoim</div><h1>Share the Light<br>of Chanukah!</h1><p>Help us bring the joy, warmth, and light of Chanukah to more Jewish people.</p></header>
-<section class="card goal"><div class="label">Our fundraising goal</div><div class="amount">$1,940</div><p class="sub">Fundraising goal · Five nights</p><p class="sub" style="margin-top:12px"><strong style="color:#19734b">$350 raised</strong> of $1,940 · $1,655 to go</p><p class="sub" style="font-size:.82rem;margin-top:5px;font-style:italic">Updated every 3 days</p><div class="progress" role="img" aria-label="Progress toward the goal: $285 raised of $1,940"><span style="width:14.69%"></span></div></section>
+<div class="kicker">Kingston, PA Mivtzoim</div><h1>Share the Light<br>of Chanukah!</h1><p>Please help us bring the joy, warmth, and light of Chanukah to more Jewish people.</p></header>
+<section class="card goal"><div class="label">Our fundraising goal</div><div class="amount">$1,940</div><p class="sub">Fundraising goal · Five nights</p><p class="sub" style="margin-top:12px"><strong style="color:#19734b">$285 raised</strong> of $1,940 · $1,655 to go</p><p class="sub" style="font-size:.82rem;margin-top:5px;font-style:italic">Updated every 3 days</p><div class="progress" role="img" aria-label="Progress toward the goal: $285 raised of $1,940"><span style="width:14.69%"></span></div></section>
 <section class="card"><h2>Here's the breakdown</h2><div class="breakdown">
 <div class="item"><span class="name">🚐 Mitzvah Tank <small style="display:block;font-weight:400;color:#667">Quantity: 1</small></span><span class="amount">$645</span></div>
 <div class="item"><span class="name">🍩 Doughnuts <small style="display:block;font-weight:400;color:#667">Quantity: 480</small></span><span class="amount">$680</span></div>
@@ -34,4 +34,21 @@ button,.button{appearance:none;border:0;border-radius:999px;padding:13px 19px;fo
 <div class="total"><span>Total</span><span>$1,940</span></div></div><p class="note">Every donation helps make our five nights of Mivtzoim possible. Thank you for helping us share the light!</p></section>
 <section class="card pay"><h2>Support Kingston Mivtzoim</h2><p>Choose how you'd like to donate.</p><div class="pay-method"><strong>Cash App</strong><a class="button cash" href="https://cash.app/$SimchaJenkelowitz?qr=1" target="_blank" rel="noopener noreferrer">Donate with Cash App</a><div class="detail" style="font-size:.85rem;margin:10px 0 0">If the button doesn't work, send your donation to: <strong>272-298-0867</strong></div></div>
 <div class="pay-method"><strong>Zelle</strong><a class="button" style="background:#6d1ed4;color:white;width:100%;font-size:1.08rem;padding:16px 20px" href="https://enroll.zellepay.com/qr-codes?data=eyJ0b2tlbiI6InNpbWNoYWplbmtAZ21haWwuY29tIiwibmFtZSI6IkNoYWltIn0=" target="_blank" rel="noopener noreferrer">Donate with Zelle</a><div class="detail" style="font-size:.85rem;margin:10px 0 0">If the button doesn't work, send your donation to: <strong>simchajenk@gmail.com</strong></div></div></section>
-<footer class="footer">Thank you for helping us spread the light of Chanukah!<div style="margin-top:12px;font-weight:700">Contact Us!</div><a href="mailto:kinstonmivtzoim87@gmail.com" style="color:#17324b;text-decoration:underline">kinstonmivtzoim87@gmail.com</a></footer></main></body></html>
+<footer class="footer">Thank you for helping us spread the light of Chanukah!<div style="margin-top:12px;font-weight:700">Contact Us!</div><a href="mailto:kinstonmivtzoim87@gmail.com" style="color:#17324b;text-decoration:underline">kinstonmivtzoim87@gmail.com</a></footer></main>
+<audio id="chanukahMusic" autoplay loop preload="auto" playsinline style="display:none"><source src="thank-you-hashem.mp3" type="audio/mpeg"></audio>
+<script>
+(function(){
+  const audio=document.getElementById('chanukahMusic');
+  audio.volume=0.65;
+  // Try audible autoplay; browsers may block it until the visitor interacts.
+  const attempt=audio.play();
+  if(attempt && typeof attempt.catch==='function') attempt.catch(function(){
+    // If autoplay is blocked, start on the visitor's first interaction without a music button.
+    const start=function(){audio.play().catch(function(){}); document.removeEventListener('click',start); document.removeEventListener('keydown',start); document.removeEventListener('touchstart',start);};
+    document.addEventListener('click',start,{once:true});
+    document.addEventListener('keydown',start,{once:true});
+    document.addEventListener('touchstart',start,{once:true,passive:true});
+  });
+})();
+</script>
+</body></html>
