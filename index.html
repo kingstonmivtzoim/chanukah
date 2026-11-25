@@ -20,7 +20,9 @@ h2{font-family:Georgia,serif;font-size:1.75rem;margin:0 0 18px;color:var(--navy)
 .pay{text-align:center}.pay p{color:var(--muted);margin-top:-7px}.pay-method{border:1px solid #ece8df;border-radius:15px;padding:17px;margin-top:14px;text-align:left}
 .pay-method strong{display:block;font-size:1.08rem;color:var(--navy)}.pay-method .detail{color:var(--muted);overflow-wrap:anywhere;margin:4px 0 12px}
 button,.button{appearance:none;border:0;border-radius:999px;padding:13px 19px;font-size:1rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
-.cash{background:#00c244;color:#062b16;width:100%;font-size:1.08rem;padding:16px 20px}.footer{text-align:center;color:#17324b;font-size:.95rem;font-weight:600;padding:8px 10px 0}
+.cash{background:#00c244;color:#062b16;width:100%;font-size:1.08rem;padding:16px 20px}.footer{text-align:center;color:#17324b;font-size:.95rem;font-weight:600;padding:8px 10px 0;display:flex;flex-direction:column;align-items:center;gap:0}
+.footer>a{display:block;margin-top:8px;position:relative;z-index:3}
+#musicControlWrap{display:block!important;width:max-content;max-width:100%;margin:26px auto 8px!important;position:relative}
 @media(max-width:480px){.wrap{padding:20px 13px 36px}.item{padding:12px}.goal .amount{font-size:2.6rem}}
 </style></head><body><main class="wrap">
 <header class="hero"><div style="text-align:right;color:#f4d98e;font-family:Georgia,serif;font-size:1.25rem;font-weight:700;letter-spacing:.04em;margin:0 2px 16px 0" dir="rtl">בס״ד</div>
@@ -33,10 +35,10 @@ button,.button{appearance:none;border:0;border-radius:999px;padding:13px 19px;fo
 <div class="item"><span class="name">📦 Mivtzoim supplies</span><span class="amount">$275</span></div>
 <div class="total"><span>Total</span><span>$1,940</span></div></div><p class="note">Every donation helps make our five nights of Mivtzoim possible. Thank you for helping us share the light!</p></section>
 <section class="card pay"><h2>Support Kingston Mivtzoim</h2><p>Choose how you'd like to donate.</p><div class="pay-method"><strong>Cash App</strong><a class="button cash" href="https://cash.app/$SimchaJenkelowitz?qr=1" target="_blank" rel="noopener noreferrer">Donate with Cash App</a><div class="detail" style="font-size:.85rem;margin:10px 0 0">If the button doesn't work, send your donation to: <strong>272-298-0867</strong></div></div>
-<div class="pay-method"><strong>Zelle</strong><a class="button" style="background:#6d1ed4;color:white;width:100%;font-size:1.08rem;padding:16px 20px" href="https://enroll.zellepay.com/qr-codes?data=eyJ0b2tlbiI6InNpbWNoYWplbmtAZ21haWwuY29tIiwibmFtZSI6IkNoYWltIn0=" target="_blank" rel="noopener noreferrer">Donate with Zelle</a><div class="detail" style="font-size:.85rem;margin:10px 0 0">If the button doesn't work, send your donation to: <strong>simchajenk@gmail.com</strong></div></div><div class="creator-credit" aria-label="Made by DU Shusterman">Made by DU Shusterman</div></section>
+<div class="pay-method"><strong>Zelle</strong><a class="button" style="background:#6d1ed4;color:white;width:100%;font-size:1.08rem;padding:16px 20px" href="https://enroll.zellepay.com/qr-codes?data=eyJ0b2tlbiI6InNpbWNoYWplbmtAZ21haWwuY29tIiwibmFtZSI6IkNoYWltIn0=" target="_blank" rel="noopener noreferrer">Donate with Zelle</a><div class="detail" style="font-size:.85rem;margin:10px 0 0">If the button doesn't work, send your donation to: <strong>simchajenk@gmail.com</strong></div></div><div class="creator-credit" aria-label="Copyright Dovid Usher Shusterman">© Dovid Usher Shusterman</div></section>
 <footer class="footer">Thank you for helping us spread the light of Chanukah!<div style="margin-top:12px;font-weight:700">Contact Us!</div><a href="mailto:kinstonmivtzoim87@gmail.com" style="color:#17324b;text-decoration:underline">kinstonmivtzoim87@gmail.com</a>
-<div style="margin:26px auto 8px"><button id="musicToggle" type="button" aria-label="Mute shturem music" style="border:2px solid #e8b84d;background:#10243a;color:#fff;border-radius:999px;padding:12px 20px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-size:1rem;box-shadow:0 5px 14px #10243a22"><span id="headphones" style="font-size:1.7rem;display:inline-block;animation:bop 1s ease-in-out infinite">🎧</span><span id="musicLabel">Mute shturem music</span><span class="notes" aria-hidden="true" style="letter-spacing:3px">♫ ♪</span></button></div>
-<style>@keyframes bop{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-5px) rotate(5deg)}}@keyframes noteFloat{0%,100%{transform:translateY(0);opacity:.65}50%{transform:translateY(-4px);opacity:1}}.notes{animation:noteFloat .9s ease-in-out infinite;color:#e8b84d}</style>
+<div id="musicControlWrap" style="position:relative;display:inline-block;margin:26px auto 8px"><div class="music-spark-stream left" aria-hidden="true"><span>♫</span><span>♪</span><span>♬</span><span>♪</span><span>♫</span><span>♬</span></div><div class="music-spark-stream right" aria-hidden="true"><span>♫</span><span>♪</span><span>♬</span><span>♪</span><span>♫</span><span>♬</span></div><button id="musicToggle" type="button" aria-label="Mute shturem music — Chas Veshalom!" style="position:relative;border:2px solid #e8b84d;background:#10243a;color:#fff;border-radius:999px;padding:12px 20px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-size:1rem;box-shadow:0 5px 14px #10243a22"><span id="headphones" style="font-size:1.7rem;display:inline-block;animation:bop 1s ease-in-out infinite">🎧</span><span id="musicLabel">Mute shturem music — Chas Veshalom!</span><span class="notes" aria-hidden="true" style="letter-spacing:3px">♫ ♪</span></button></div>
+<style>@keyframes bop{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-5px) rotate(5deg)}}@keyframes noteFloat{0%,100%{transform:translateY(0);opacity:.65}50%{transform:translateY(-4px);opacity:1}}.notes{animation:noteFloat .9s ease-in-out infinite;color:#e8b84d}.soundwave{color:#e8b84d;font-weight:900;letter-spacing:-2px;font-size:1.25rem;display:inline-block;animation:wavePulse .75s ease-in-out infinite alternate}</style>
 </footer></main>
 <audio id="chanukahMusic" autoplay loop preload="auto" playsinline style="display:none"><source src="thank-you-hashem.mp3" type="audio/mpeg"></audio>
 <script>
@@ -47,7 +49,7 @@ button,.button{appearance:none;border:0;border-radius:999px;padding:13px 19px;fo
   const headphones=document.getElementById('headphones');
   audio.volume=0.65;
   let muted=false;
-  function update(){label.textContent=muted?'Play shturem music':'Mute shturem music';button.setAttribute('aria-label',label.textContent);headphones.textContent=muted?'🎧':'🎧';}
+  function update(){label.textContent=muted?'You’re missing out on shturem music play now!':'Mute shturem music — Chas Veshalom!';button.setAttribute('aria-label',label.textContent);headphones.textContent='🎧';}
   button.addEventListener('click',function(e){e.stopPropagation();muted=!muted;if(muted){audio.pause();}else{audio.play().catch(function(){});}update();});
   // Try audible autoplay; browsers may block it until the visitor interacts.
   const attempt=audio.play();
@@ -62,7 +64,25 @@ button,.button{appearance:none;border:0;border-radius:999px;padding:13px 19px;fo
 
 <style>
 .pay{position:relative;padding-bottom:48px!important}
-.pay .creator-credit{position:absolute;right:12px;bottom:10px;font-family:Georgia,serif;font-size:11px;letter-spacing:.5px;color:#17324b;opacity:.75;text-align:right}
-@media(max-width:600px){.pay .creator-credit{right:10px;bottom:8px;font-size:10px}}
+.pay .creator-credit{position:absolute;right:12px;bottom:10px;font-family:Georgia,serif;font-size:17px;letter-spacing:.6px;color:#17324b;font-weight:700;opacity:.9;text-align:right}
+@media(max-width:600px){.pay .creator-credit{right:10px;bottom:8px;font-size:15px}}
+#musicToggle{overflow:visible}
+.footer>a{order:0}
+#musicControlWrap{order:1}
+.music-spark-stream{height:175px!important;overflow:hidden!important;left:auto!important;right:auto!important}
+.music-spark-stream.left{right:calc(100% + 12px)!important;left:auto!important}
+.music-spark-stream.right{left:calc(100% + 12px)!important;right:auto!important}
+#musicToggle:before,#musicToggle:after{content:")))";position:absolute;color:#e8b84d;font-size:1.35rem;font-weight:900;letter-spacing:-3px;animation:wavePulse .75s ease-in-out infinite alternate;top:50%;transform:translateY(-50%);pointer-events:none}
+#musicToggle:before{right:calc(100% + 10px);content:"((("}
+#musicToggle:after{left:calc(100% + 10px)}
 </style>
+
 </body></html>
+<style>
+.music-spark-stream{position:absolute;bottom:30px;height:175px;width:40px;overflow:hidden;pointer-events:none;z-index:2}
+.music-spark-stream.left{right:calc(100% + 12px)}.music-spark-stream.right{left:calc(100% + 12px)}
+.music-spark-stream span{position:absolute;bottom:0;left:8px;font-size:25px;color:#e8b84d;text-shadow:0 2px 6px #10243a33;opacity:0;animation:musicRise 5.8s linear infinite}
+.music-spark-stream span:nth-child(2){left:20px;animation-delay:1s;font-size:20px}.music-spark-stream span:nth-child(3){left:3px;animation-delay:2s;font-size:28px}.music-spark-stream span:nth-child(4){left:22px;animation-delay:3s}.music-spark-stream span:nth-child(5){left:7px;animation-delay:4s;font-size:19px}.music-spark-stream span:nth-child(6){left:18px;animation-delay:4.8s;font-size:24px}
+@keyframes musicRise{0%{transform:translateY(0) rotate(-10deg);opacity:0}10%{opacity:.9}80%{opacity:.85}100%{transform:translateY(-175px) rotate(16deg);opacity:0}}
+@media(max-width:600px){.music-spark-stream{height:175px;width:32px}.music-spark-stream span{font-size:19px;left:2px}@keyframes musicRise{100%{transform:translateY(-175px) rotate(16deg);opacity:0}}}
+</style>
